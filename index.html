@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Laura - v4.7.0
@@ -85,7 +86,8 @@
                   <ul>
                     <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Shibla Sharif C L</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
-                      <span>shibushibz99@gmail.com</span></li>
+                      <span>shibushibz99@gmail.com</span>
+                    </li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91-8590951567</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kerala, India</span></li>
                   </ul>
@@ -356,37 +358,33 @@
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form id="submit-form"
-              action="https://script.google.com/macros/s/AKfycbwv9SC-KhJwJjrpkKq3gSyH279Olk5F6w7MH241/exec"
-              method="post" role="form" class="php-email-form">
+          <div class="col-lg-6">
+            <form id="gform"
+               role="form" class="php-email-form">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                <div class="col-md-6 form-group">
                   <input onkeyup="nameValidate()" oninput="this.value=this.value.replace(/[^A-Za-z-,.;'&/.() ]|^ /g,'')"
-                    type="text" name="name" class="form-control" id="name" required>
+                    type="text" name="name" class="form-control" id="name" placeholder="Your Name">
                   <p id="name-error" style="color: red;font-style: italic;"></p>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" onkeyup="emailValidate()" oninput="this.value=this.value.replace(/\s/g, '')"
-                    class="form-control" name="email" id="email" required>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input onkeyup="emailValidate()" oninput="this.value=this.value.replace(/\s/g, '')" type="email"
+                    class="form-control" name="email" id="email" placeholder="Your Email">
                   <p id="email-error" style="color: red;font-style: italic;"></p>
                 </div>
+
               </div>
-              <div class="form-group">
-                <label for="name">Phone</label>
-                <input class="form-control" maxlength="10" oninput="this.value=this.value.replace(/[^\d]/,'')"
-                  onkeyup="phoneValidate()" id="phone" name="phone" type="tel">
+              <div class="form-group mt-3">
+                <input onkeyup="phoneValidate()" oninput="this.value=this.value.replace(/[^\d]/,'')" type="tel"
+                  class="form-control" maxlength="10" name="phone" id="phone" placeholder="Phone">
                 <p id="phone-error" style="color: red;font-style: italic;"></p>
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message"></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
+               
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
@@ -395,16 +393,10 @@
 
         </div>
 
-
       </div>
-    </section>
+    </section><!-- End Contact Me Section -->
 
-
-  </main>
-
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -443,7 +435,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="script.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 </body>
 
 </html>

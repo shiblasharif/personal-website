@@ -2,8 +2,11 @@ var username,phone,email,comment;
 
 
 function nameValidate(){
+    
 	var namevalue=$('#name').val()
+    
 	var letters = /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/
+   
 	if(namevalue==""){
 		$("#name-error").html("Field is required")
         $('#name').css({'border':'solid 1px red'})
@@ -20,6 +23,7 @@ function nameValidate(){
         }
 
 function phoneValidate(){
+    
 	var namevalue=$('#phone').val()
 	var letters = /^\d+$/;
 	if(namevalue=="" || namevalue==" "){
@@ -99,20 +103,22 @@ $('.navbar-collapse a').click(function(){
 });
 
 
-    $("#submit-form").submit((e)=>{
+    $("#gform").submit((e)=>{
+       
         e.preventDefault()
         if (username==true && email==true && phone==true) {
             
         
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbwv9SC-KhJwJjrpkKq3gSyH279Olk5F6w7MH241/exec",
-            data:$("#submit-form").serialize(),
+            url:"https://script.google.com/macros/s/AKfycbxXsgh-WZ8J-iFOd5wmO-2sMWZCyblyW2ZgD1_QsUbyjhLQuCckP_3DaOVAxmkOpV_0/exec",
+            data:$("#gform").serialize(),
             method:"post",
             success:function (response){
-                swal({title:"Good job!", text:"Your message send successfully", icon:"success"},function(){
-                    window.location.reload() 
-                  });  
-                //window.location.reload()
+                alert("successfully sybmitted")
+                // alert({title:"Good job!", text:"Your message send successfully", icon:"success"},function(){
+                //     window.location.reload() 
+                //   });  
+                window.location.reload()
                 //window.location.href="https://google.com"
             },
             error:function (err){
